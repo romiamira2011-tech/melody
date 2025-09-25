@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="he">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>מגנטים ותמונות מקומות מכל העולם</title>
+  <meta name="description" content="גלריית מגנטים ותמונות מקומות מרחבי העולם – כולל ישראל." />
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --accent: #2b7a78;
+      --text: #333;
+      --muted: #555;
+      --radius: 14px;
+      --gap: 20px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: Arial, sans-serif; background: var(--bg); color: var(--text); }
+    header { background: var(--accent); color: #fff; padding: 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 32px; }
+    nav { margin-top: 10px; }
+    nav a { color: #fff; text-decoration: none; margin: 0 10px; padding: 6px 12px; border-radius: 10px; }
+    nav a:hover { background: rgba(255,255,255,0.2); }
+    .section { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--gap); }
+    .card { background: #fff; border-radius: var(--radius); box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; overflow: hidden; transition: transform 0.2s; }
+    .card:hover { transform: scale(1.03); }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card h3 { margin: 12px 0 6px 0; font-size: 20px; }
+    .card p { margin: 0 12px 16px 12px; color: var(--muted); font-size: 14px; }
+    footer { text-align: center; color: var(--muted); padding: 20px; background: #eee; margin-top: 40px; }
+    form { display: grid; gap: 12px; max-width: 400px; margin: 0 auto; }
+    form input, form textarea { padding: 10px; border: 1px solid #ccc; border-radius: 10px; font-size: 16px; }
+    form button { background: var(--accent); color: #fff; border: none; padding: 10px; border-radius: 10px; font-weight: bold; cursor: pointer; }
+    form button:hover { background: #205d5a; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>מגנטים ותמונות מקומות מכל העולם</h1>
+    <nav>
+      <a href="#gallery">גלריה</a>
+      <a href="#share">שתפו מגנט</a>
+      <a href="#contact">צור קשר</a>
+    </nav>
+  </header>
+
+  <section id="gallery" class="section">
+    <h2>גלריית מקומות מרחבי העולם</h2>
+    <p>תמונות ממקומות יפים ומפורסמים בכל היבשות – כולל ישראל.</p>
+    <div class="grid">
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTolR-IgZI_-1cc_kQ24cMNBnp1pe-HMBZWbw&s" alt="פריז">
+        <h3>פריז, צרפת</h3>
+        <p>מגדל אייפל המפורסם – סמל הרומנטיקה האירופית.</p>
+      </div>
+      <div class="card">
+        <img src="https://www.masa.co.il/wp-content/uploads/2017/10/nyc_open.jpg" alt="ניו יורק">
+        <h3>ניו יורק, ארה"ב</h3>
+        <p>פסל החירות במפרץ מנהטן.</p>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlrd5uvzE-OYuRx58KB6VyzoNhyjA8WIPb5A&s" alt="סידני">
+        <h3>סידני, אוסטרליה</h3>
+        <p>בית האופרה האייקוני של סידני.</p>
+      </div>
+      <div class="card">
+        <img src="https://meyda.education.gov.il/files/pop/6443/%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D-%D7%A2%D7%91%D7%A8%D7%99%D7%AA-%D7%99%D7%A1%D7%95%D7%93%D7%99.jpg" alt="ירושלים">
+        <h3>ירושלים, ישראל</h3>
+        <p>העיר העתיקה המשלבת היסטוריה ותרבות.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="share" class="section">
+    <h2>שתפו מגנט משלכם</h2>
+    <p>העלו תמונה וספרו על המגנט שלכם – אילו זיכרונות הוא מזכיר לכם?</p>
+    <form onsubmit="event.preventDefault();alert('תודה ששיתפת מגנט!');this.reset();">
+      <input type="text" name="country" placeholder="מדינה/עיר" required />
+      <input type="url" name="image" placeholder="קישור לתמונה" required />
+      <textarea name="story" placeholder="סיפור קצר על המגנט" required></textarea>
+      <button type="submit">שלח</button>
+    </form>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>צור קשר</h2>
+    <p>רוצים לשאול או להציע? שלחו לנו הודעה:</p>
+    <form onsubmit="event.preventDefault();alert('הודעתכם נשלחה!');this.reset();">
+      <input type="text" name="name" placeholder="שם" required />
+      <input type="email" name="email" placeholder="אימייל" required />
+      <textarea name="message" placeholder="הודעה" required></textarea>
+      <button type="submit">שלח</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 מגנטים ותמונות מכל העולם – אתר דוגמה ב-HTML ו-CSS בקובץ אחד.
+  </footer>
+</body>
+</html>
